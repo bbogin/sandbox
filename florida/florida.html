@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.background {
+  fill: none;
+  pointer-events: all;
+}
+
+  .boundary {
+    .stroke:#fff;
+  }
+
+
+
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script>
+
+            //Width and height
+            var w = 1500;
+            var h = 1200;
+
+            //Define map projection
+            var projection = d3.geo.mercator()
+                                   .translate([w/2, h/2])
+                                   .scale([5*w]);
+
+            //Define path generator
+            var path = d3.geo.path()
+                             .projection(projection);
+
+            //Create SVG element
+            var svg = d3.select("body")
+                        .append("svg")
+                        .attr("width", w)
+                        .attr("height", h);
+
+            //Load in GeoJSON data
+            d3.json("fl50k.json", function(json) {
+
+                var center = d3.geo.centroid(json);
+                projection.center(center);
+
+                //Bind data and create one path per GeoJSON feature
+                svg.selectAll("path")
+                   .data(json.features)
+                   .enter()
+                   .append("path")
+                   .attr("d", path)
+                   .attr("class", "boundary")
+                   .style({"stroke": "white", "stroke-width": ".5px", "fill":"steelblue"});
+
+
+            });
+
+        </script>
+    </body>
+</html>
