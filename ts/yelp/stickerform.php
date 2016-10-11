@@ -3,7 +3,7 @@ session_start();
 session_set_cookie_params(time()+3600, '/', '.thinksmart.com', true, true);
 header("Content-Security-Policy: frame-ancestors 'none'");
 header("Content-Security-Policy: default-src 'self' fonts.googleapis.com fonts.gstatic.com");
-header("Content-Security-Policy: script-src 'unsafe-inline' ajax.googleapis.com https://www.google.com/recaptcha/api.js https://www.gstatic.com/recaptcha/api2/r20160817124709/recaptcha__en.js");
+header("Content-Security-Policy: script-src 'unsafe-inline' ajax.googleapis.com https://www.google.com/recaptcha/api.js https://www.gstatic.com");
 header("Strict-Transport-Security:max-age=63072000");
 ?>
 
