@@ -1,23 +1,15 @@
 body {
 	margin: 0;
 	text-align: center;
-	font-family: 'Century Gothic', 'Muli Regular', sans-serif !important;
+	font-family: 'Century Gothic', 'Muli Regular', sans-serif;
 }
+
 
 #header {
 	width: 1000px;
 	max-width: 100%;
 	margin: 20px auto;
 }
-
-#questions {
-	font-size: 26px;
-}
-
-#hereforyou {
-	margin: 5px auto;
-}
-
 
 .page-nav-button {
     background: #0095da;
@@ -33,21 +25,27 @@ body {
     float: none;
     margin: 1px auto;    
     height: 36px;
-    width: 90%;
+    width: 95%;
+}
+
+.navbuttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (min-width: 570px) {
-	.page-nav-button {
-		float: left;
-		margin: 0 1px;
-    	width: 19%;
-	}
+    .page-nav-button {
+        float: left;
+        margin: 0 1px;
+        width: 20%;
+    }
 }
 
 .spacer {
-	width: 100%;
-	height: 42px;
-	background-color: #EFEEF0;
+    width: 100%;
+    height: 42px;
+    background-color: #EFEEF0;
 }
 
 .button {
@@ -78,18 +76,271 @@ body {
     margin-left: 10px;
 }
 
+.pop:hover {
+    background: #ffd93a;
+    color: #000;
+    text-decoration: none;
+}
+
 .action-col {
-	display: table-cell;
-	padding: 0 10px 10px;
-	vertical-align: top;
-	border-bottom: 1px solid gray;
+    display: table-cell;
+    padding: 0 10px 10px;
+    vertical-align: top;
 }
 
 #action-col-1 {
-	border-right: 1px solid gray;
+    border-right: 1px solid #CCCCCC;
 }
 
 #action-col-3 {
-	border-left: 1px solid gray;
-	text-align: left;
+    border-left: 1px solid #CCCCCC;
+    text-align: left;
 }
+
+#action-col-1, #action-col-2 {
+    color: #999999;
+}
+
+@media (min-width: 1200px) {
+    #actionbuttons {
+        float: right;
+    }
+}
+
+@media (max-width: 1199px) {
+    #actionbuttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+#questions {
+	font-size: 26px;
+    padding: 8px 0 12px 0;
+    border-top: 1px solid #CCCCCC;
+}
+
+#hereforyou {
+	margin: 5px auto;
+}
+
+#getaquote, #browse {
+	max-width: 680px;
+    padding-bottom: 15px;
+    margin: 0 auto 15px auto;
+    line-height: 170%;
+    color: #000;
+    font-size: 19px;
+    font-family: "proxima-nova", Arial, sans-serif;
+}
+
+
+h1 {
+	font-size: 40px;
+	font-family: 'Century Gothic', 'Muli Regular', sans-serif;
+    font-weight: bold;
+	margin: 0;
+}
+
+.quote, #plandiv, #discdiv {
+    background-color: #E5E5E5;
+    padding: 15px;
+
+}
+
+#browsediv {
+	margin: 15px 0;
+}
+
+#whydiv {
+    background-color: #0082DE;
+    color: white;
+    padding: 40px;
+}
+
+#why {
+    margin: 0 0 20px 0;
+}
+
+#weoffer {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: "proxima-nova", Arial, sans-serif;
+}
+
+.whytext {
+    font-size: 15px;
+    font-family: "proxima-nova", Arial, sans-serif;
+    font-weight: bold;
+    max-width: 250px;
+    margin: auto;
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .whytext {
+        height: 125px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+#finddiv {
+    padding: 35px;
+}
+
+
+#find {
+    color: #0082DE;
+}
+
+#findtext {
+    font-size: 19px;
+    font-family: "proxima-nova", Arial, sans-serif;
+    font-weight: bold;
+}
+
+
+#plandiv {
+    padding: 35px;
+    font-size: 20px;
+    font-family: "proxima-nova", Arial, sans-serif;
+}
+
+#planspan {
+    max-width: 1000px;
+    margin: auto;
+}
+
+#call {
+    font-size: 30px;
+    color: #999999;
+    padding: 9px 0 15px 0;
+}
+
+#discdiv {
+    padding: 50px;
+}
+
+#disclaimer {
+    color: #999999;
+    text-align: left;
+    max-width: 880px;
+    margin: auto;
+}
+
+
+.btn {
+    border-radius: 8px !important;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Century Gothic",Arial,sans-serif;
+    font-size: 19px;
+    line-height: 45px;
+    margin: 0 auto;
+    text-decoration: none;
+    width: 190px;
+    height: 47px;
+    border: 1px solid black;
+    margin-top: 34px;
+}
+
+.bluebtn {
+    background-color: #0082de;
+    color: white;
+}
+
+.bluebtn:hover {
+    background-color: #36abe2;
+    text-decoration: none;
+    color: white;
+}
+
+
+.inputnumber {
+    color: #014d83;
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 21px;
+    font-family: Century gothic;
+}
+
+input#age {
+    width: 60px;
+    height: 30px;
+    font-size: 130%;
+    color: #000;
+    margin-left: 5px;
+    border: 0;
+    padding: 0;
+}
+
+select#sizeOfHousehold {
+    width: 60px;
+    height: 30px;
+    font-size: 130%;
+    margin-left: 10px;
+    color: #000;
+    -webkit-appearance: menulist-button;
+    border-color: #fff;
+    background-color: #fff;
+    font-size: 18px;
+}
+
+input#householdIncome {
+    width: 135px;
+    height: 30px;
+    font-size: 130%;
+    color: #000;
+    margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
